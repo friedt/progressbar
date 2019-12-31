@@ -60,7 +60,7 @@ It consists of a:
 
 ### Unit testing
 
-The javascript source files are unit tested using karma as test runner and jasmine as test framework. 
+The javascript source files are unit tested using Karma as test runner and Jasmine as test framework. Headless chrome browser is used for test purpose.
 All unit tests are included with full coverage report using istanbul
 the test files have a glob pattern containing: `*.spec.js`
 
