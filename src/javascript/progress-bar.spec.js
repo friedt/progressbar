@@ -33,13 +33,13 @@ describe('progress-bar.js', function () {
         obj.progress(nodeList);
         progressBar = document.getElementById('progress-bar');
         expect(obj.progress).toHaveBeenCalledWith(nodeList);
+        expect(progressBar.value).toBe(0);
         expect(progressBar).toHaveClass('js-progress-bar');
         expect(progressBar.max).toBe(100);
     });
 
     it('should have clicked the button with className progress--disabled', function () {
         let button = document.querySelector('.progress--invoker');
-        button.classList.add('progress--disabled');
         button.click();
         expect(button).toHaveClass('progress--disabled');
     });
@@ -60,7 +60,8 @@ describe('progress-bar.js', function () {
 
     it('should check if progress html element is NOT present in DOM', function () {
         progressBar = null;
-        expect(progressBar).toBe(null);
+        expect(progressBar).toBeNull();
+        expect(progressBar).toBeFalsy(); // 0 , undefined , null
     });
 
 });
