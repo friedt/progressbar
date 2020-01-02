@@ -7,6 +7,13 @@ module.exports = function (config) {
         // frameworks to use
         frameworks: ['jasmine', 'jasmine-matchers'],
 
+        // prevent order
+        client: {
+            jasmine: {
+                random: false
+            }
+        },
+
         // plugins
         plugins: [
             'karma-coverage-istanbul-reporter',
